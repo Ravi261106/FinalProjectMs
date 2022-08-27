@@ -13,6 +13,8 @@ var restaurantRouter = require('./routes/restaurants');
 var citylistRouter = require('./routes/citylist');
 var mealsRouter = require('./routes/meals');
 const authRouter = require('./routes/AuthRoute');
+const foodRouter = require('./routes/foods');
+const orderRouter = require('./routes/orderRoutes');
 
 
 mongoose.connect(DB_URL);
@@ -37,6 +39,8 @@ app.use('/restaurant', restaurantRouter);
 app.use('/citylist', citylistRouter);
 app.use('/meals', mealsRouter);
 app.use('/auth', authRouter);
+app.use('/food', foodRouter);
+app.use('/order', orderRouter);
 
 
 // catch 404 and forward to error handler
